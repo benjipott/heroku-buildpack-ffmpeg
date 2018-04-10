@@ -58,7 +58,7 @@ validate_url() {
     -o /dev/null)
   if [ "${status}" != "200" ]; then
     echo ""
-    error_return "Unsupported FFmpeg version: ${version}
+    error_return "Unsupported FFmpeg version: ${version} ${url} ${status}
 
 Build this buildpack as a Docker image. Then, try to run it
 to build and upload FFmpeg binaries for Heroku during slub
