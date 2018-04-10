@@ -15,8 +15,8 @@ export_env_dir "${ENV_DIR}" '^(FFMPEG_VERSION|FFMPEG_S3_BUCKET|DOMAIN_S3)$'
 
 FFMPEG_VERSION="${FFMPEG_VERSION:-3.3.2}"
 FFMPEG_S3_BUCKET="${FFMPEG_S3_BUCKET:-kc-heroku-buildpack-binaries}"
-DOMAIN_S3= "${DOMAIN_S3:-s3.amazonaws.com}"
-FFMPEG_URL="https://${DOMAIN_S3}/${FFMPEG_S3_BUCKET}/ffmpeg/${STACK:-cedar-14}/${FFMPEG_VERSION}.tar.xz"
+#DOMAIN_S3= "${DOMAIN_S3:-s3.amazonaws.com}"
+FFMPEG_URL="https://${DOMAIN_S3:-s3.amazonaws.com}/${FFMPEG_S3_BUCKET}/ffmpeg/${STACK:-cedar-14}/${FFMPEG_VERSION}.tar.xz"
 
 # Install FFmpeg
 install_ffmpeg "${BUILD_DIR}" "${FFMPEG_VERSION}" "${FFMPEG_URL}"
