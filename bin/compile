@@ -11,7 +11,7 @@ BIN_DIR="$(cd $(dirname $0); pwd)" # absolute path
 . "${BIN_DIR}/ffmpeg"
 . "${BIN_DIR}/util"
 
-export_env_dir "${ENV_DIR}" '^(FFMPEG_VERSION|FFMPEG_S3_BUCKET)$'
+export_env_dir "${ENV_DIR}" '^(FFMPEG_VERSION|FFMPEG_S3_BUCKET|DOMAIN_S3)$'
 
 FFMPEG_VERSION="${FFMPEG_VERSION:-3.3.2}"
 FFMPEG_S3_BUCKET="${FFMPEG_S3_BUCKET:-kc-heroku-buildpack-binaries}"
