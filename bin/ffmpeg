@@ -26,10 +26,10 @@ install_ffmpeg() {
     tar -xpJf "${tarball}" -C "${baseDir}"
     rm "${tarball}"
     echo "${version}" > "${baseDir}/version"
-    #if [ ! -f "${exe}" ]; then
-    #  error_return "Unable to retrieve FFmpeg."
-    #  exit 1
-    #fi
+    if [ ! -f "${exe}" ]; then
+      error_return "Unable to retrieve FFmpeg."
+      exit 1
+    fi
   fi
   export PATH="${baseDir}/bin:${PATH}"
 
