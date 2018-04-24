@@ -2,6 +2,7 @@
 require 'uri'
 require 'net/http'
 
+
 module FFmpeg
   extend Rake::DSL
 
@@ -29,7 +30,7 @@ module FFmpeg
     prefix = File.absolute_path PREFIX
     yasm = File.absolute_path '.yasm/bin/yasm'
     Dir.chdir File.dirname t.name do
-      sh configure, "--prefix=#{prefix}", "--yasmexe=#{yasm}"
+      sh configure, "--prefix=#{prefix}", "--yasmexe=#{yasm}", "--enable-version3", "--enable-libvmaf"
     end
   end
 

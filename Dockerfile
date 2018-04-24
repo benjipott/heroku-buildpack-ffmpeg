@@ -14,6 +14,8 @@ RUN ["bundle"]
 
 ENV FFMPEG_DIR="${BUILD_DIR}/.ffmpeg"
 VOLUME ["${FFMPEG_DIR}.build"]
+ENV VMAF_DIR="${BUILD_DIR}/.vmaf"
+VOLUME ["${VMAF_DIR}.build"]
 
 COPY Rakefile Rakefile
 COPY rakelib rakelib

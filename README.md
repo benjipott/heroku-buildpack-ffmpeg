@@ -13,7 +13,7 @@ Add buildpack to your existing app:
 If you want to see changes immediately, create an empty commit:
 
     git commit --allow-empty -m 'Add FFmpeg buildpack'
-    
+
 See for yourself:
 
     git push heroku master
@@ -21,7 +21,7 @@ See for yourself:
     heroku run bash
     # Running bash on ⬢ kc-ffmpeg... up, run.2418 (Hobby)
     ffmpeg -version
-    # ffmpeg version 3.3.2 Copyright (c) 2000-2017 the FFmpeg developers
+    # ffmpeg version 4.0 Copyright (c) 2000-2017 the FFmpeg developers
     # built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
     # configuration: --prefix=/app/.ffmpeg --yasmexe=/app/.yasm/bin/yasm
     # libavutil      55. 58.100 / 55. 58.100
@@ -62,3 +62,4 @@ We use [AWS CLI](https://aws.amazon.com/cli/) in the example above, but you can 
 
 * `FFMPEG_S3_BUCKET`
 * `FFMPEG_VERSION`
+* `VMAF_VERSION`
